@@ -1,0 +1,2 @@
+'use client'
+export default function ErrorPage({error,reset}:{error:Error&{digest?:string};reset:()=>void}) {return <main className="standalone"><p className="eyebrow">LET’S TRY THAT AGAIN</p><h1>The studio couldn’t load this page.</h1><p className="muted">Check your connection and database setup. If this is the first launch, apply PromptChain_GenAI/supabase/001-prompt-studio.sql in Melon’s Supabase project.</p>{error.digest&&<p className="footnote">Reference: {error.digest}</p>}<button className="button" onClick={reset}>Try again</button></main>}

@@ -1,0 +1,4 @@
+import Link from 'next/link'
+import {requireAdmin} from '../../../lib/auth'
+import {ChainForm} from '../../../../components/forms'
+export default async function NewChain(){await requireAdmin();return <><Link className="text-link" href="/">← Prompt chains</Link><section className="page-heading"><div><p className="eyebrow">A FRESH START</p><h1>Connect a new idea.</h1><p className="muted intro">Name your workflow, then shape what happens at each step.</p></div></section><div className="editor-layout"><ChainForm/><aside className="panel pastel"><p className="eyebrow">MAKE IT YOURS</p><h2>A small chain can go a long way.</h2><ol className="guide-list"><li>Describe what’s in the image.</li><li>Find an unexpected, funny angle.</li><li>Turn that angle into five captions.</li></ol><p className="muted">New workflows start outside Melon’s automatic chain mix. Test them here before enabling them in Melon Admin.</p></aside></div></>}
